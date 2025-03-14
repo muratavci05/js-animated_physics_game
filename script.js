@@ -3,6 +3,9 @@ window.addEventListener("load", function(){
     canvas.width = 1280;
     canvas.height = 720;
 
+    ctx.fillStyle = "white";
+    ctx.lineWidth = ""
+
     class Player {
         constructor(game){
             this.game = game;
@@ -10,11 +13,9 @@ window.addEventListener("load", function(){
             this.collisionY = this.game.height * 0.5;
             this.collisionRadius = 30;
         }
-
         draw(context){
             context.beginPath();
-            context.arc(this.collisionX, this.collisionY, 50, 0, Math.PI * 2
-            this.collisionRadius, 0, Math.PI * 2);
+            context.arc(this.collisionX, this.collisionY, this.collisionRadius,0, Math.PI * 2);
             context.stroke();
 
         }
